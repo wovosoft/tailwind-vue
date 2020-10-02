@@ -1,10 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="mx-auto" style="height: 100vh">
+      <div
+        class="sidebar float-left border-r"
+        style="height: 100vh; width: 300px"
+      >
+        <h4>Components</h4>
+        <ol>
+          <li><router-link to="/">Home</router-link></li>
+          <li>
+            <router-link to="/about">About</router-link>
+          </li>
+          <li>
+            <router-link to="/button">Button</router-link>
+          </li>
+        </ol>
+      </div>
+      <div class="float-left p-5" style="height: 100vh">
+        <router-view />
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
 
